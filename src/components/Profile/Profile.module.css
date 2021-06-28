@@ -6,6 +6,7 @@
 
 .profile {
   width: 320px;
+  padding-top: 15px;
   background-color: #fff;
   margin: 15px auto;
   align-items: center;
@@ -16,7 +17,7 @@
 }
 
 .description {
-  font-family: "Fira Sans";
+  font-family: 'Fira Sans';
 
   margin-bottom: 5px;
   color: #7a7a7a;
@@ -33,7 +34,7 @@
 }
 
 .name {
-  font-family: "Roboto";
+  font-family: 'Roboto';
   font-weight: 400;
   line-height: 1.33;
   margin-bottom: 5px;
