@@ -1,5 +1,5 @@
-import FriendListItem from "./FriendListItem";
-import s from "./FriendList.module.css";
+import FriendListItem from './FriendListItem'
+import s from './FriendList.module.css'
 
 const FriendList = ({ friends }) => (
   <ul className={s.list}>
@@ -13,6 +13,6 @@ const FriendList = ({ friends }) => (
       </li>
     ))}
   </ul>
-);
+)
 
-export default FriendList;
+export default FriendList

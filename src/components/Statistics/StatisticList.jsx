@@ -1,10 +1,11 @@
-import PropTypes from "prop-types";
-import Statistics from "./Statistics";
-import s from "../Statistics/Statistics.module.css";
+import PropTypes from 'prop-types'
+import Statistics from './Statistics'
+import s from '../Statistics/Statistics.module.css'
 
-const StatisticList = ({ stats, title = "Упс" }) => (
+const StatisticList = ({ stats, title }) => (
+  // можно задать title = 'Упс', тогда при отсутствии title будет именно эта строка
   <section className={s.section}>
-    <h2 className="title">{title}</h2>
+    {title && <h2>{title}</h2>}
 
     <ul className={s.list}>
       {stats.map((stat) => (
@@ -14,10 +15,10 @@ const StatisticList = ({ stats, title = "Упс" }) => (
       ))}
     </ul>
   </section>
-);
+)
 
 StatisticList.propTypes = {
   title: PropTypes.string,
-};
+}
 
-export default StatisticList;
+export default StatisticList

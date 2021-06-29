@@ -1,15 +1,13 @@
-import PropTypes from "prop-types";
-import s from "../Profile/Profile.module.css";
-import defaultImg from "../../images/avatarka-pustaya-vk_23.jpg";
+import PropTypes from 'prop-types'
+import s from '../Profile/Profile.module.css'
+import defaultImg from '../../images/avatarka-pustaya-vk_23.jpg'
 
 const Profile = ({
   avatar = defaultImg,
   name,
-  tag = "who knows",
+  tag = 'who knows',
   location,
-  followers,
-  views,
-  likes,
+  stats,
 }) => (
   <div className={s.container}>
     <div className={s.profile}>
@@ -23,29 +21,27 @@ const Profile = ({
       <ul className={s.stats}>
         <li className={s.item}>
           <span className="label">Followers</span>
-          <span className="quantity">{followers}</span>
+          <span className="quantity">{stats.followers}</span>
         </li>
         <li className={s.item}>
           <span className="label">Views</span>
-          <span className="quantity">{views}</span>
+          <span className="quantity">{stats.views}</span>
         </li>
         <li className={s.item}>
           <span className="label">Likes</span>
-          <span className="quantity">{likes}</span>
+          <span className="quantity">{stats.likes}</span>
         </li>
       </ul>
     </div>
   </div>
-);
+)
 
 Profile.propTypes = {
   defaultImg: PropTypes.string,
   name: PropTypes.string.isRequired,
   tag: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,
-  followers: PropTypes.number.isRequired,
-  views: PropTypes.number.isRequired,
-  likes: PropTypes.number.isRequired,
-};
+  stats: PropTypes.objectOf(PropTypes.number).isRequired,
+}
 
-export default Profile;
+export default Profile
