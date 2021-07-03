@@ -1,14 +1,16 @@
 import PropTypes from 'prop-types'
 import s from './FriendList.module.css'
 
-export default function FriendListItem({ avatar, name, status }) {
+export default function FriendListItem({ avatar, name, status, id }) {
   // console.log(status);
   return (
-    <div className="item">
-      <span className={status ? s.onLine : s.offLine}></span>
-      <img className={s.avatar} src={avatar} alt="" width="48" />
-      <p className="name">{name}</p>
-    </div>
+    <>
+      <li className={s.item} key={id}>
+        <span className={status ? s.onLine : s.offLine}></span>
+        <img className={s.avatar} src={avatar} alt="" width="48" />
+        <p className="name">{name}</p>
+      </li>
+    </>
   )
 }
 
